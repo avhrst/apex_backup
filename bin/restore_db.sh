@@ -1,0 +1,1 @@
+impdp system/AvhrSt31415926@xe full=Y dumpfile=DB11G.dmp logfile=impdpDB11G.log EXCLUDE=SCHEMA:"in ('SYSTEM’,'APEX_050000')" TABLE_EXISTS_ACTION=REPLACE
