@@ -141,6 +141,12 @@ ARCHIVE=$BACKUP/server-$NOW.tar.gz
 ARCHIVED=$BACKUP/$NOW
 $TAR -zcvf $ARCHIVE $ARCHIVED
 
+### clear ###                                                                                                                                                                                    
+rm -rf $ARCHIVED
+rm -rf $DPDUMP_DIR/DB_$NOW.dmp
+rm -rf $DPDUMP_DIR/expdp_$NOW.log
+
+
 ### ftp ###                                                                                                                                                                                      
 cd $BACKUP
 DUMPFILE=server-$NOW.tar.gz
@@ -153,8 +159,4 @@ quit
 END_SCRIPT
 
 ### clear ###                                                                                                                                                                                    
-rm -rf $ARCHIVED
 #rm -rf $BACKUP/server-$NOW.tar.gz
-rm -rf $DPDUMP_DIR/DB_$NOW.dmp
-rm -rf $DPDUMP_DIR/expdp_$NOW.log
-
