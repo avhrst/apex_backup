@@ -159,4 +159,5 @@ quit
 END_SCRIPT
 
 ### clear ###                                                                                                                                                                                    
-#rm -rf $BACKUP/server-$NOW.tar.gz
+cd $BACKUP
+find  -name "*server-*.tar.gz" -type f -mtime +2 -delete
