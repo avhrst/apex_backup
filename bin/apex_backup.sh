@@ -154,6 +154,8 @@ $FTP -n $FTPS <<END_SCRIPT
 quote USER $FTPU
 quote PASS $FTPP
 cd $FTPD
+prompt
+mdelete *.tar.gz
 mput $DUMPFILE
 quit
 END_SCRIPT
